@@ -3,8 +3,10 @@
 @import url('./reset.css');
 @import url('./common.css');
 
-body{
-    position: relative;
+body {
+    font-family: $font-en01;
+    background-color: #001528;
+    color: #FFDEAC;
 }
 
 
@@ -20,22 +22,15 @@ body{
 
 }
 
-
-body {
-    font-family: $font-en01;
-    background-color: #001528;
-    color: #FFDEAC;
-}
-
 header {
     display: flex;
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 4000;
     align-items: center;
     justify-content: space-between;
-    pointer-events: none;
+    pointer-events: auto;
     height: 102px;
 
     .st0 {
@@ -49,19 +44,70 @@ header {
         pointer-events: auto;
         opacity: 1;
         mix-blend-mode: difference;
+
+        a {
+            display: block;
+            height: 100%;
+        }
     }
 
     .navbar {
-        font-family: "Saol Display";
-        margin: 43px 0 0 43px;
+        margin: 0 43px 0 43px;
         cursor: pointer;
         z-index: 10;
-        display: inline-block;
+        display: flex;
+        font-size: 25px;
+
+        div {
+            display: flex;
+            cursor: pointer;
+
+            &.hide {
+                display: none;
+            }
+        }
 
     }
 
     .nav_main {
-        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        position: fixed;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        visibility: hidden;
+        background-color: #001528;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            li {
+                font-size: 100px;
+            }
+        }
+
+        .stamp {
+            position: absolute;
+            margin: 0 0 43px 43px;
+            left: 0;
+            bottom: 0;
+        }
+
+        .address {
+            position: absolute;
+            margin: 0 43px 43px 0;
+            right: 0;
+            bottom: 0;
+            text-align: right;
+        }
     }
 
 
@@ -135,7 +181,8 @@ footer {
 }
 
 .res_wrap {
-    z-index: 10;
+    z-index: 100;
+
     .btn {
         position: fixed;
         right: 30px;

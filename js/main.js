@@ -10,6 +10,9 @@ $(function(){
         })
     })
 
+    $('.navbar').click(function(){
+        ('.nav_main').css("opacity", "1")
+    })
 
     
     $('.btn > div').click(function () { 

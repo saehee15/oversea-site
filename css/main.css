@@ -1,8 +1,8 @@
 img {
   -o-object-fit: cover;
      object-fit: cover;
-  width: 101%;
-  height: 101%;
+  width: 100%;
+  height: 100%;
 }
 
 .section1 .large_img {
@@ -33,10 +33,9 @@ img {
   gap: 16%;
 }
 .section2 ul li {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 34%;
-  height: 720px;
-  min-height: 250px;
   display: flex;
   flex-direction: column;
 }
@@ -51,17 +50,46 @@ img {
   font-size: 19px;
 }
 .section2 ul li .img_container {
-  -webkit-clip-path: inset(0 0 0 0);
-          clip-path: inset(0 0 0 0);
-  height: 100%;
-  width: 100%;
-  position: relative;
+  transform: translate3d(0px, 0px, 0px);
+  opacity: 1;
+  visibility: inherit;
+  height: 792px;
 }
 .section2 ul li.second {
   flex-direction: column-reverse;
 }
 .section2 ul li.second h3 {
   margin-top: 8%;
+}
+
+.section3 {
+  overflow: hidden;
+  margin-left: 8%;
+}
+.section3 ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.section3 ul li {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0 6vw 0 0;
+}
+.section3 ul li .img_container {
+  width: 45vw;
+  max-width: 650px;
+  height: 80vh;
+  max-height: 800px;
+}
+.section3 ul li .txt {
+  flex: 1;
+  margin-top: 5%;
+  height: 100%;
+  font-size: 62px;
 }
 
 .section4 {
@@ -75,6 +103,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  text-align: center;
 }
 .section4 h1 .text_animation div {
   display: inline-block;
