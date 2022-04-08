@@ -50,10 +50,14 @@ img {
   font-size: 19px;
 }
 .section2 ul li .img_container {
-  transform: translate3d(0px, 0px, 0px);
   opacity: 1;
   visibility: inherit;
   height: 792px;
+  transform: rotate(10deg);
+}
+.section2 ul li .img_container.on {
+  transform: rotate(0deg);
+  transition: all ease 1s;
 }
 .section2 ul li.second {
   flex-direction: column-reverse;
@@ -65,6 +69,15 @@ img {
 .section3 {
   overflow: hidden;
   margin-left: 8%;
+  margin-bottom: 15%;
+}
+.section3 h2 {
+  margin: 0 8% 8% 0;
+  font-size: 117px;
+  text-transform: uppercase;
+}
+.section3 h2 div {
+  display: inline-block;
 }
 .section3 ul {
   display: flex;
@@ -112,6 +125,17 @@ img {
   font-size: 119px;
 }
 
+.section5 h2 {
+  text-align: center;
+  margin: 15% 8% 0 8%;
+  position: absolute;
+  z-index: 10;
+}
+.section5 h2 div {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 117px;
+}
 .section5 ul {
   display: flex;
   flex-wrap: wrap;

@@ -1,5 +1,4 @@
 
-
 img {
     object-fit: cover;
     width: 100%;
@@ -64,11 +63,18 @@ img {
             }
 
             .img_container {
-                transform: translate3d(0px, 0px, 0px);
                 opacity: 1;
                 visibility: inherit;
                 height: 792px;
+                transform: rotate(10deg);
+
+
+                &.on {
+                    transform: rotate(0deg);
+                    transition: all ease 1s;
+                }
             }
+
 
             &.second {
                 flex-direction: column-reverse;
@@ -84,6 +90,17 @@ img {
 .section3 {
     overflow: hidden;
     margin-left: 8%;
+    margin-bottom: 15%;
+
+    h2 {
+        margin: 0 8% 8% 0;
+        font-size: 117px;
+        text-transform: uppercase;
+
+        div {
+            display: inline-block;
+        }
+    }
 
     ul {
         display: flex;
@@ -140,6 +157,18 @@ img {
 }
 
 .section5 {
+    h2{
+        text-align: center;
+        margin: 15% 8% 0 8%;
+        position: absolute;
+        z-index: 10;
+
+        div{
+            display: inline-block;
+            text-transform: uppercase;
+            font-size: 117px;
+        }
+    }
     ul {
         display: flex;
         flex-wrap: wrap;

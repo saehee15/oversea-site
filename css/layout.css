@@ -1,4 +1,4 @@
-@import url("./fonts.css");
+@import url("./font.css");
 @import url("./reset.css");
 @import url("./common.css");
 body {
@@ -52,7 +52,7 @@ header .navbar {
   font-size: 25px;
 }
 header .navbar div {
-  display: flex;
+  display: inline-block;
   cursor: pointer;
 }
 header .navbar div.hide {
@@ -71,6 +71,9 @@ header .nav_main {
   right: 0;
   visibility: hidden;
   background-color: #001528;
+}
+header .nav_main.on {
+  visibility: visible;
 }
 header .nav_main ul {
   display: flex;
@@ -188,7 +191,6 @@ footer .address p {
   position: fixed;
   right: 30px;
   bottom: 110px;
-  opacity: 0;
   padding: 20px;
   border-radius: 10px 10px 0 10px;
   box-shadow: 0 12px 20px 0 rgba(0, 0, 0, 0.08), 0 1px 4px 0 rgba(0, 0, 0, 0.06);
@@ -198,4 +200,8 @@ footer .address p {
   color: #1d1f20;
   line-height: 1.5;
   pointer-events: auto;
+  display: none;
+}
+.res_wrap .message.on {
+  display: block;
 }
