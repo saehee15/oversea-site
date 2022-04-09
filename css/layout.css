@@ -2,11 +2,35 @@
 @import url("./reset.css");
 @import url("./common.css");
 body {
-  font-family: "Saol Display", "Noto Sans KR", sans-serif;
-  background-color: #001528;
-  color: #FFDEAC;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+body.hidden {
+  overflow: hidden;
 }
 
+@-webkit-keyframes txt_animation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes txt_animation {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
 .cursor {
   position: absolute;
   top: 0;
@@ -14,8 +38,9 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 1px solid #FFDEAC;
+  border: 1px solid #fff;
   z-index: 2;
+  pointer-events: none;
 }
 
 header {
@@ -23,29 +48,29 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 4000;
+  z-index: 10;
+  padding: 30px;
+  box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
   pointer-events: auto;
-  height: 102px;
-}
-header .st0 {
-  fill: #FFDEAC;
 }
 header .logo {
-  margin: 43px 0 0 43px;
   cursor: pointer;
   z-index: 10;
   pointer-events: auto;
   opacity: 1;
   mix-blend-mode: difference;
+  font-family: "Couture", sans-serif;
+  font-style: normal;
+  font-size: 35px;
+  letter-spacing: 10px;
 }
 header .logo a {
   display: block;
   height: 100%;
 }
 header .navbar {
-  margin: 0 43px 0 43px;
   cursor: pointer;
   z-index: 10;
   display: flex;
@@ -97,6 +122,22 @@ header .nav_main .address {
   bottom: 0;
   text-align: right;
 }
+@media (max-width: 1024px) {
+  header .logo {
+    font-size: 25px;
+  }
+  header .navbar {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767px) {
+  header .logo {
+    font-size: 18px;
+  }
+  header .navbar {
+    font-size: 17px;
+  }
+}
 
 footer {
   margin: 12% 8% 8% 8%;
@@ -137,7 +178,7 @@ footer .stamp svg {
   height: 70px;
 }
 footer .stamp svg .st0 {
-  fill: #FFDEAC;
+  fill: #fff;
 }
 footer .address {
   display: flex;
@@ -161,7 +202,7 @@ footer .address p {
   bottom: 30px;
   opacity: 1;
   outline: none;
-  background-color: #FFDEAC;
+  background-color: #fff;
   width: 60px;
   height: 60px;
   border-radius: 50%;

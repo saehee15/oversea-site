@@ -1,14 +1,31 @@
 @import './variables';
+@import './mixin';
+
 @import url('./font.css');
 @import url('./reset.css');
 @import url('./common.css');
 
 body {
     font-family: $font-en01;
-    background-color: #001528;
-    color: #FFDEAC;
+    background-color: #000;
+    color: #fff;
+
+    &.hidden{
+        overflow: hidden;
+    }
 }
 
+
+@keyframes txt_animation {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translateZ(0);
+    }
+}
 
 .cursor {
     position: absolute;
@@ -17,8 +34,9 @@ body {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border: 1px solid #FFDEAC;
+    border: 1px solid #fff;
     z-index: 2;
+    pointer-events: none;
 
 }
 
@@ -27,23 +45,24 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 4000;
+    z-index: 10;
+    padding: 30px;
+    box-sizing: border-box;
     align-items: center;
     justify-content: space-between;
     pointer-events: auto;
-    height: 102px;
-
-    .st0 {
-        fill: #FFDEAC;
-    }
 
     .logo {
-        margin: 43px 0 0 43px;
         cursor: pointer;
         z-index: 10;
         pointer-events: auto;
         opacity: 1;
         mix-blend-mode: difference;
+        font-family: $font-en03;
+        font-style: normal;
+        font-size: 35px;
+        letter-spacing: 10px;
+
 
         a {
             display: block;
@@ -52,7 +71,6 @@ header {
     }
 
     .navbar {
-        margin: 0 43px 0 43px;
         cursor: pointer;
         z-index: 10;
         display: flex;
@@ -86,6 +104,7 @@ header {
 
         &.on{
             visibility: visible;
+
         }
 
         ul {
@@ -96,6 +115,7 @@ header {
 
             li {
                 font-size: 100px;
+
             }
         }
 
@@ -115,7 +135,23 @@ header {
         }
     }
 
+    @include tablet{
+         .logo{
+             font-size: 25px;
+         }   
+         .navbar{
+             font-size: 20px;
+         }
+    }
 
+    @include mobile{
+        .logo{
+            font-size: 18px;
+        }   
+        .navbar{
+            font-size: 17px;
+        }
+   }
 }
 
 footer {
@@ -165,7 +201,7 @@ footer {
             height: 70px;
 
             .st0 {
-                fill: #FFDEAC;
+                fill: #fff;
             }
         }
     }
@@ -194,7 +230,7 @@ footer {
         bottom: 30px;
         opacity: 1;
         outline: none;
-        background-color: #FFDEAC;
+        background-color: #fff;
         width: 60px;
         height: 60px;
         border-radius: 50%;
