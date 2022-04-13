@@ -12,12 +12,14 @@ img {
 .section1 .large_img {
   display: block;
   position: relative;
+  margin-top: 280px;
 }
 .section1 .large_img h2 {
   text-align: center;
   margin: 8%;
   height: 50vh;
   font-size: 5vw;
+  line-height: 1.2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,7 +55,6 @@ img {
   opacity: 1;
   visibility: inherit;
   padding-bottom: 130%;
-  background: #f00;
   position: relative;
 }
 .section2 ul li .img_container img {
@@ -92,45 +93,34 @@ img {
 
 .section3 {
   overflow: hidden;
-  margin-left: 8%;
-  margin-bottom: 15%;
+  margin: 0 8% 15%;
 }
-.section3 h2 {
-  margin: 0 8% 8% 0;
-  font-size: 6vw;
-  text-transform: uppercase;
+.section3 .container {
+  position: relative;
+  width: 100vw;
+  overflow: hidden;
+  padding: 20px 0;
+  font-family: "Couture", sans-serif;
 }
-.section3 h2 div {
+.section3 .scrolling-text {
   display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
-.section3 ul {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  height: 100%;
-}
-.section3 ul li {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0 6vw 0 0;
-}
-.section3 ul li .img_container {
-  width: 45vw;
-  max-width: 650px;
-  height: 80vh;
-  max-height: 800px;
-}
-.section3 ul li .txt {
-  flex: 1;
-  margin-top: 5%;
-  height: 100%;
-  font-size: 62px;
+.section3 .scrolling-text .scrolling-text-content {
+  color: #fff;
+  font-size: 120px;
+  white-space: nowrap;
+  transition: transform 0.5s cubic-bezier(0.23, 0.36, 0.28, 0.83);
+  line-height: 1em;
+  margin: 50px 0;
 }
 
 .section4 {
   position: relative;
+  margin-bottom: 15%;
 }
 .section4 h2 {
   position: absolute;
@@ -150,10 +140,9 @@ img {
 .section5 h2 {
   text-align: center;
   position: absolute;
-  height: 100vh;
   width: 100%;
   z-index: 10;
-  font-size: 6vw;
+  font-size: 5vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -171,14 +160,27 @@ img {
 .section5 ul li {
   margin-top: 0;
   flex: 1 1 34%;
-  height: 720px;
   margin-top: 16%;
   min-height: 250px;
 }
 .section5 ul li .img_container {
-  -webkit-clip-path: inset(0 0 0 0);
-          clip-path: inset(0 0 0 0);
-  height: 100%;
-  width: 100%;
+  opacity: 1;
+  visibility: inherit;
+  padding-bottom: 130%;
   position: relative;
+}
+.section5 ul li .img_container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 767px) {
+  .section5 li {
+    flex: 1 1 100%;
+    margin-bottom: 8%;
+  }
 }

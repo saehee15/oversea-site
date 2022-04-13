@@ -16,30 +16,6 @@ body {
 }
 
 
-@keyframes txt_animation {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, 100%, 0);
-    }
-    to {
-        opacity: 1;
-        transform: translateZ(0);
-    }
-}
-
-.cursor {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    z-index: 2;
-    pointer-events: none;
-
-}
-
 header {
     display: flex;
     position: fixed;
@@ -170,7 +146,7 @@ footer {
         ul {
             li {
                 font-size: 60px;
-                line-height: 60px;
+                line-height: 70px;
             }
         }
     }
@@ -190,21 +166,6 @@ footer {
         }
     }
 
-    .stamp {
-        flex: 1 1 34%;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-
-        svg {
-            width: 70px;
-            height: 70px;
-
-            .st0 {
-                fill: #fff;
-            }
-        }
-    }
 
     .address {
         display: flex;
@@ -219,6 +180,46 @@ footer {
             font-weight: 300;
         }
     }
+
+    @include tablet{
+        .footer_menu{
+            flex: 1 1 33%;
+            ul{
+                li{
+                    font-size: 40px;
+                    line-height: 40px;
+                }
+            }
+        }   
+        .sns{
+            ul{
+                li{
+                    font-size: 30px;
+                    line-height: 30px;
+                }
+            }
+        }
+   }
+
+   @include mobile{
+    .footer_menu{
+        flex: 1 1 33%;
+        ul{
+            li{
+                font-size: 25px;
+                line-height: 30px;
+            }
+        }
+    }   
+    .sns{
+        ul{
+            li{
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+  }
 }
 
 .res_wrap {
