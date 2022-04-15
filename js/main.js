@@ -1,5 +1,14 @@
 $(function(){
 
+    $(window).scroll(function () {
+        var curr = $(window).scrollTop()
+        if (curr > 0) {
+            $('header').addClass('hide')
+        } else {
+            $('header').removeClass('hide')
+        }
+    })
+
     // intro
     const introTxt = new SplitType('.section1 .txt_hide', { types: 'words, chars', });
 
@@ -27,7 +36,7 @@ $(function(){
         autoplay: true,
         centeredSlides: true,
     })}
-        else {   var slide = new Swiper(".slide", {
+        else { var slide = new Swiper(".slide", {
 
             slidesPerView: '3',
             effect: 'coverflow',

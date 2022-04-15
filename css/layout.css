@@ -11,15 +11,12 @@ body.hidden {
 }
 
 header {
-  display: flex;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 10;
   padding: 30px;
   box-sizing: border-box;
-  align-items: center;
-  justify-content: space-between;
   pointer-events: auto;
 }
 header .logo {
@@ -37,65 +34,17 @@ header .logo a {
   display: block;
   height: 100%;
 }
-header .navbar {
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  font-size: 25px;
-}
-header .navbar div {
-  display: inline-block;
-  cursor: pointer;
-}
-header .navbar div.hide {
+header.hide {
   display: none;
-}
-header .nav_main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  visibility: hidden;
-  background-color: #001528;
-}
-header .nav_main.on {
-  visibility: visible;
-}
-header .nav_main ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-header .nav_main ul li {
-  font-size: 100px;
-}
-header .nav_main .stamp {
-  position: absolute;
-  margin: 0 0 43px 43px;
-  left: 0;
-  bottom: 0;
 }
 @media (max-width: 1024px) {
   header .logo {
     font-size: 25px;
   }
-  header .navbar {
-    font-size: 20px;
-  }
 }
 @media (max-width: 767px) {
   header .logo {
     font-size: 18px;
-  }
-  header .navbar {
-    font-size: 17px;
   }
 }
 
@@ -114,8 +63,8 @@ footer .footer_menu {
   margin-bottom: 8%;
 }
 footer .footer_menu ul li {
-  font-size: 60px;
-  line-height: 70px;
+  font-size: 4vw;
+  line-height: 1.5;
 }
 footer .sns {
   display: flex;
@@ -125,32 +74,16 @@ footer .sns {
   text-align: right;
 }
 footer .sns ul li {
-  font-size: 40px;
-  line-height: 40px;
+  font-size: 3vw;
+  line-height: 1.5;
 }
 @media (max-width: 1024px) {
   footer .footer_menu {
     flex: 1 1 33%;
   }
-  footer .footer_menu ul li {
-    font-size: 25px;
-    line-height: 30px;
-  }
-  footer .sns ul li {
-    font-size: 20px;
-    line-height: 20px;
-  }
 }
 @media (max-width: 767px) {
   footer .footer_menu {
     flex: 1 1 33%;
-  }
-  footer .footer_menu ul li {
-    font-size: 25px;
-    line-height: 30px;
-  }
-  footer .sns ul li {
-    font-size: 20px;
-    line-height: 20px;
   }
 }
