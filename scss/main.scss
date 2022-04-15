@@ -107,7 +107,7 @@ img {
                 }
                 .img_container{
                     padding-bottom: 80%;
-                    min-height: 100px;
+                    min-height: 80px;
                 }
                 &.second{
                     flex-direction: column;
@@ -115,6 +115,7 @@ img {
             }
         }
     }
+
 }
 
 .section3 {
@@ -137,6 +138,7 @@ img {
       }
 
       @include mobile{
+        margin-bottom: 30%;
         .container {
             height: 10vh;
         }
@@ -158,6 +160,9 @@ img {
         text-align: center;
         font-size: $font-h2;
     }
+    @include mobile{
+        margin-bottom: 30%;
+     }
 }
 
 .section5 {
@@ -206,9 +211,10 @@ img {
     }
 
     @include mobile{
+       ul{
         li{
-            flex:  1 1 100%;
-            margin-top: 8%;
+            margin-top: 4%;
         }
+       } 
     }
 }
