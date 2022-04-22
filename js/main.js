@@ -55,7 +55,6 @@ $(function(){
     //flip
     gsap.registerPlugin(Flip);
     const squares = gsap.utils.toArray(".txt");
- 
     function doFlip() {
     const state = Flip.getState(squares);
     swap(squares);
@@ -65,7 +64,6 @@ $(function(){
     function swap([a, b]) {
      a.parentNode.children[0] === a ? a.parentNode.appendChild(a) : a.parentNode.appendChild(b);
     }
-
     document.addEventListener("scroll", doFlip);
 
 

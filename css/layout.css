@@ -49,7 +49,7 @@ header.hide {
 }
 
 footer {
-  margin: 12% 8% 30% 8%;
+  margin: 12% 8% 12% 8%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -83,6 +83,9 @@ footer .sns ul li {
   }
 }
 @media (max-width: 767px) {
+  footer {
+    margin: 12% 8% 30% 8%;
+  }
   footer .footer_menu {
     flex: 1 1 33%;
   }
